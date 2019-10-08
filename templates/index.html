@@ -1,0 +1,11 @@
+<!-- templates/playlists_index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Vinyls</h1>
+    {% for vinyl in vinyls %}
+        <h2>{{ vinyl.album }}</h2>
+        <h3>{{ vinyl.artist }}</h3>
+        <small>{{ vinyl.price }}</small>
+    {% endfor %}
+{% endblock %}
