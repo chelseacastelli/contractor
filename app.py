@@ -23,7 +23,7 @@ db.vinyls.insert_many([
     { 'artist': 'Russ', 'album': 'ZOO', 'price': 18.00, 'image': './static/russ.jpeg' },
     { 'artist': 'The 1975', 'album': 'A Brief Inquiry Into Online Relationships', 'price': 38.98, 'image': './static/1975.jpeg' },
     { 'artist': 'Troye Sivan', 'album': 'Bloom', 'price': 19.98, 'image': './static/troye_sivan.jpeg' },
-    { 'artist': 'The Beatles', 'album': 'Abbey Road Anniversary', 'price': 35.98, 'image': './static/beatles.jpeg' }
+    { 'artist': 'The Beatles', 'album': 'Abbey Road', 'price': 35.98, 'image': './static/beatles.jpeg' }
 ])
 
 app = Flask(__name__)
