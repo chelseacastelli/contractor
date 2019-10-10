@@ -30,6 +30,11 @@
 </div>
 </div>
 <footer>
-    <h2 style='text-align:right;'>Cart Total: ${{total}}</h2>
+    <h3 style='text-align:right;'>Cart Total: ${{total}}</h3>
+    <form method='POST' action='/checkout'>
+        <input type='hidden'>
+        <button class='btn-checkout' type='submit'>Checkout</button>
+    </form>
+
 </footer>
 {% endblock %}
