@@ -73,3 +73,26 @@ p {
     padding: 16px 32px;
 }
 
+/*Floating Back-To-Top Button*/
+#myBtn {
+    position: fixed;
+    bottom: 40px;
+    float: right;
+    right: 8.5%;
+    left: 90.25%;
+    max-width: 50px;
+    width: 100%;
+    font-size: 12px;
+    border-color: rgba(85, 85, 85, 0.2);
+    background-color: black;
+    padding: .5px;
+    border-radius: 4px;
+
+}
+/*On Hover Color Change*/
+#myBtn:hover {
+    background-color: grey;
+}
+
+/* Design credit to Ashley DeNuzzo */
+

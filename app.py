@@ -59,9 +59,10 @@ def show_cart():
     total = 0
     for i in range(len(total_price)):
         total += total_price[i]["price"]*total_price[i]["quantity"]
-        round(total, 2)
+        round(float(total), 2)
 
     return render_template('cart.html', carts=cart, total=total)
+
 
 @app.route('/carts/<cart_id>/delete', methods=['POST'])
 def remove_from_cart(cart_id):
