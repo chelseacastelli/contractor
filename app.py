@@ -73,9 +73,6 @@ def remove_from_cart(cart_id):
 
     return redirect(url_for('show_cart'))
 
-@app.route('/checkout')
-def checkout():
-    return render_template('checkout_form.html')
 
 if __name__ == '__main__':
   app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))
