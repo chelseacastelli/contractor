@@ -12,6 +12,8 @@ vinyls.drop()
 carts = db.carts
 carts.drop()
 
+
+# Images from UrbanOutfitters - https://www.urbanoutfitters.com/
 db.vinyls.insert_many([
     { 'artist': 'Hozier', 'album': 'Wasteland, Baby!', 'price': 25.98, 'image': './static/hozier.jpeg' },
     { 'artist': 'Mac Miller', 'album': 'Blue Slide Park', 'price': 28.98, 'image': './static/mac_miller.jpeg'},
@@ -19,16 +21,19 @@ db.vinyls.insert_many([
     { 'artist': 'Paramore', 'album': 'Riot!', 'price': 20.98, 'image': './static/paramore.jpeg' },
     { 'artist': 'Fleetwood Mac', 'album': 'Rumours', 'price': 24.98, 'image': './static/fleetwood_mac.jpeg' },
     { 'artist': 'Russ', 'album': 'ZOO', 'price': 18.98, 'image': './static/russ.jpeg' },
-    { 'artist': 'The 1975', 'album': 'A Brief Inquiry Into Online Relationships', 'price': 38.98, 'image': './static/1975.jpeg' },
+    { 'artist': 'Cigarettes After Sex', 'album': 'Cry', 'price': 24.98, 'image': './static/Cigarettes_after_sex.jpeg' },
     { 'artist': 'Troye Sivan', 'album': 'Bloom', 'price': 19.98, 'image': './static/troye_sivan.jpeg' },
-    { 'artist': 'The Beatles', 'album': 'Abbey Road', 'price': 35.98, 'image': './static/beatles.jpeg' }
+    { 'artist': 'The Beatles', 'album': 'Abbey Road', 'price': 35.98, 'image': './static/beatles.jpeg' },
+    { 'artist': 'Lizzo', 'album': 'Cuz I Love You', 'price': 21.98, 'image': './static/lizzo.jpeg' },
+    { 'artist': 'Queen', 'album': 'Greatest Hits', 'price': 35.98, 'image': './static/queen.jpeg' },
+    { 'artist': 'Billie Eilish', 'album': 'don\'t smile at me', 'price': 21.98, 'image': './static/billie_eilish.jpeg' },
 ])
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    """Return homepage."""
+    """Display items"""
     return render_template('index.html', vinyls=vinyls.find())
 
 
