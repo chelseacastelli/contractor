@@ -21,7 +21,7 @@ db.vinyls.insert_many([
     { 'artist': 'Paramore', 'album': 'Riot!', 'price': 20.98, 'image': './static/paramore.jpeg' },
     { 'artist': 'Fleetwood Mac', 'album': 'Rumours', 'price': 24.98, 'image': './static/fleetwood_mac.jpeg' },
     { 'artist': 'Russ', 'album': 'ZOO', 'price': 18.98, 'image': './static/russ.jpeg' },
-    { 'artist': 'Cigarettes After Sex', 'album': 'Cry', 'price': 24.98, 'image': './static/Cigarettes_after_sex.jpeg' },
+    { 'artist': 'Cigarettes After Sex', 'album': 'Cry', 'price': 24.98, 'image': './static/cigarettes_after_sex.jpeg' },
     { 'artist': 'Troye Sivan', 'album': 'Bloom', 'price': 19.98, 'image': './static/troye_sivan.jpeg' },
     { 'artist': 'The Beatles', 'album': 'Abbey Road', 'price': 35.98, 'image': './static/beatles.jpeg' },
     { 'artist': 'Lizzo', 'album': 'Cuz I Love You', 'price': 21.98, 'image': './static/lizzo.jpeg' },
