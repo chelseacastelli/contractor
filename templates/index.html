@@ -3,29 +3,34 @@
 
 {% block content %}
 
-<div class='row'>
+<div class='container'>
+    <div class='row'>
+        {% for vinyl in vinyls %}
+        <div class='col-md-4 col-sm-3'>
+            <div class='card'>
+                <div class='card-block'>
+                    <img class="mongo-images" src={{vinyl.image}} width='250' height='350'>
+                        <div class='middle'>
+                            <form method='POST' action='/vinyls/{{ vinyl._id }}/add'>
+                                <input type='hidden'>
+                                <button class='btn' type='submit'>Add To Cart</button>
+                            </form>
+                        </div>
 
-{% for vinyl in vinyls %}
-<div class='col-md-4'>
-    <div class='card' style='width: 18rem;'>
-
-        <h4 class='card-title'>{{ vinyl.album }}</h4>
-        <h6 class='card-subtitle text-muted'>{{ vinyl.artist }}</h6>
-
-        <img class="mongo-images" src={{vinyl.image}} width='250' height='350'>
-
-        <div class='card-body'>
-            <p>{{ vinyl.price }}</p>
+                    <div class='card-title'>
+                        <h4>{{ vinyl.album }}</h4>
+                    </div>
+                    <div class='card-text'>
+                        <p>{{ vinyl.artist }}</p>
+                        <p>{{ vinyl.price }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
+        {% endfor %}
     </div>
-
-<button type="button" class="btn btn-default">Add to Cart</button>
 </div>
 
-{% endfor %}
-
-</div>
 
 {% endblock %}
 
