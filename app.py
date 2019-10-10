@@ -18,7 +18,7 @@ db.vinyls.insert_many([
     { 'artist': 'Kehlani', 'album': 'While We Wait', 'price': 22.98, 'image': './static/kehlani.jpeg' },
     { 'artist': 'Paramore', 'album': 'Riot!', 'price': 20.98, 'image': './static/paramore.jpeg' },
     { 'artist': 'Fleetwood Mac', 'album': 'Rumours', 'price': 24.98, 'image': './static/fleetwood_mac.jpeg' },
-    { 'artist': 'Russ', 'album': 'ZOO', 'price': 18.00, 'image': './static/russ.jpeg' },
+    { 'artist': 'Russ', 'album': 'ZOO', 'price': 18.98, 'image': './static/russ.jpeg' },
     { 'artist': 'The 1975', 'album': 'A Brief Inquiry Into Online Relationships', 'price': 38.98, 'image': './static/1975.jpeg' },
     { 'artist': 'Troye Sivan', 'album': 'Bloom', 'price': 19.98, 'image': './static/troye_sivan.jpeg' },
     { 'artist': 'The Beatles', 'album': 'Abbey Road', 'price': 35.98, 'image': './static/beatles.jpeg' }
@@ -63,16 +63,13 @@ def remove_from_cart(cart_id):
     # This will delete a product by using an id as a parameter
     """Remove one product from cart"""
     cart_item  = carts.find_one({'_id': ObjectId(cart_id)})
-
-
     carts.update_one(
         {'_id': ObjectId(cart_id)},
         {'$inc': {'quantity': -int(1)}}
     )
+
     if cart_item['quantity']==1:
-
         carts.remove({'_id': ObjectId(cart_id)})
-
 
     return redirect(url_for('show_cart'))
 
