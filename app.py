@@ -39,6 +39,7 @@ def index():
 
 @app.route('/vinyls/<vinyl_id>/add', methods=['POST'])
 def add_to_cart(vinyl_id):
+    """"""
     if carts.find_one({'_id': ObjectId(vinyl_id)}):
         carts.update_one(
             {'_id': ObjectId(vinyl_id)},
